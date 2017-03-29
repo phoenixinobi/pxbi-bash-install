@@ -40,17 +40,7 @@ Process {
         exit 1
     }
     Write-Host "Windows Subsystem for Linux Feature has been turned on."
-    Restart-Computer -Wait -For PowerShell -Timeout 300 -Delay 2
-    Write-Host "Installing Bash on Windows 10..."
-    try {
-        $command = 'cmd.exe /C "lxrun /install /y"'
-        Invoke-Expression -Command:$command
-    }
-    catch [System.Exception] {
-        Write-Warning "Process failed to install Bash on Windows 10. Exiting bash-install."
-        exit 1
-    }
-    Write-Host "Bash on Windows 10 is now installed."
+    Restart-Computer -Wait
 }
 End {
     Write-Host "Exiting bash-install."
