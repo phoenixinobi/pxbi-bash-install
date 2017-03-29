@@ -5,7 +5,6 @@
    This script will install Bash on Windows 10, including the necessary OS preparations.
 .NOTES 
    Created by: phoenixinobi
-   Modified: 03/29/2017 08:08:00 PM
 #>
 Begin {
     Write-Host "Checking Windows 10 Build Number..."
