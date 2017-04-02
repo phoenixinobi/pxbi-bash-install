@@ -11,7 +11,7 @@ Begin {
     $WindowsBuild = (Get-WmiObject -Class Win32_OperatingSystem).BuildNumber
     Write-Host "Windows 10 Build Number is" $WindowsBuild
     if ((Get-WmiObject -Class Win32_OperatingSystem).BuildNumber -lt 14393) {
-        Write-Warning "This build of Windows 10 is unsupported. Please upgrade to Windows 10 Build Number 14393 or greater. Bash on Windows 10 was not installed. Exiting bash-install."
+        Write-Warning "This build of Windows 10 is unsupported. Please upgrade to Windows 10 Build Number 14393 or greater. Bash on Windows 10 was not installed. Exiting pxbi-bash-install."
         exit 1
     }
 }
@@ -23,11 +23,11 @@ Process {
         Invoke-Expression -Command:$command
     }
     catch [System.Exception] {
-        Write-Warning "Process failed to install Bash on Windows 10. Exiting bash-install."
+        Write-Warning "Process failed to install Bash on Windows 10. Exiting pxbi-bash-install."
         exit 1
     }
     Write-Host "Bash on Windows 10 is now installed."
 }
 End {
-    Write-Host "Exiting bash-install."
+    
 }
