@@ -5,8 +5,4 @@ To use this script, download the pxbi-bash-install.ps1 and pxbi-bash-install-2.p
 .\pxbi-bash-install.ps1
 ```
 
-After the machine restarts run the following command line instructions below in PowerShell
-
-```
-.\pxbi-bash-install-2.ps1
-```
+Windows 10 will automatically reboot and run pxbi-bash-install-2.ps1, this will download and install Bash on Windows 10.
